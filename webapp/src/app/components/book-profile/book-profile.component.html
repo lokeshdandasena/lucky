@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/7f6d51cfed.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/dashboard" style="color: white"
+          >Knowledge HUb</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <button type="button" class="btn btn-primary" routerLink="/bookview">
+      Read Book
+    </button>
+
+    <div class="main-container-fluid">
+      <div class="main-row d-flex flex-wrap">
+        <div class="image-container col-lg-3 col-md-3 col-sm-4 col-12">
+          <img src="data:image/png;base64,{{ details?.imagebyte }}" alt="””" />
+        </div>
+        <div class="book-details col-lg-8 col-md-8 col-sm-7 col-12">
+          <div class="title">
+            <h1>{{ details?.bookTitle }}</h1>
+            <p>Written By : {{ details?.authorName }}</p>
+            <p>Language : {{ details?.language }}</p>
+            <p>Genre:{{ details?.bookGenre }}</p>
+            <p style="line-height: 1.6rem">
+              Description: {{ details?.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="button" class="btn" (click)="toBookProfile()">
+          View Book
+        </button>
+      </div>
+    </div>
+
+    <div class="container mt-12 mb-5">
+      <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+          <p>{{ email }}</p>
+          <div
+            class="d-flex flex-row align-items-center add-comment p-2 bg-white rounded"
+            style="border: 1px solid black"
+          >
+            <img
+              class="rounded-circle"
+              src="https://i.imgur.com/QvDFBCC.jpg"
+              width="40"
+            /><input
+              type="text"
+              class="form-control border-0 no-box-shadow ml-1"
+              placeholder="Leave a constructive comment..."
+            /><i class="fas fa-comment-medical"></i>
+          </div>
+          <div class="bg-white mt-3 shadow-lg p-3 mb-3 rounded">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row user">
+                <img
+                  class="rounded-circle img-fluid img-responsive"
+                  src="https://i.imgur.com/Yxje2El.jpg"
+                  width="40"
+                />
+                <div class="d-flex flex-column ml-2">
+                  <span class="font-weight-bold">@Nick</span>
+                </div>
+              </div>
+            </div>
+            <div class="comment-text text-justify mt-3">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white mt-2 shadow-lg p-3 mb-3 rounded">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row user">
+                <img
+                  class="rounded-circle img-fluid img-responsive"
+                  src="https://i.imgur.com/JXZLwEY.jpg"
+                  width="40"
+                />
+                <div class="d-flex flex-column ml-2">
+                  <span class="font-weight-bold">@Samantha</span>
+                </div>
+              </div>
+            </div>
+            <div class="comment-text text-justify mt-3">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white mt-3 shadow-lg p-3 mb-3 rounded">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row user">
+                <img
+                  class="rounded-circle img-fluid img-responsive"
+                  src="https://i.imgur.com/JXZLwEY.jpg"
+                  width="40"
+                />
+                <div class="d-flex flex-column ml-2">
+                  <span class="font-weight-bold">@Samantha</span>
+                </div>
+              </div>
+            </div>
+            <div class="comment-text text-justify mt-3">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white mt-3 shadow-lg p-3 mb-3 rounded">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row user">
+                <img
+                  class="rounded-circle img-fluid img-responsive"
+                  src="https://i.imgur.com/Yxje2El.jpg"
+                  width="40"
+                />
+                <div class="d-flex flex-column ml-2">
+                  <span class="font-weight-bold">@NIck</span>
+                </div>
+              </div>
+            </div>
+            <div class="comment-text text-justify mt-3">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white mt-3 shadow-lg p-3 mb-3 rounded">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-row user">
+                <img
+                  class="rounded-circle img-fluid img-responsive"
+                  src="https://i.imgur.com/Yxje2El.jpg"
+                  width="40"
+                />
+                <div class="d-flex flex-column ml-2">
+                  <span class="font-weight-bold">@NIck</span>
+                </div>
+              </div>
+            </div>
+            <div class="comment-text text-justify mt-3">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

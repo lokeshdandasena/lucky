@@ -1,0 +1,142 @@
+.example-full-width {
+  width: 100%;
+}
+.example-full-width1 {
+  width: 100%;
+}
+
+.font-robo {
+  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+.page-wrapper {
+  min-height: 93vh;
+}
+
+.bg-red {
+  background: #e4e3e3;
+  background: url("/assets/images/Book-Background-High-Quality-Image.jpg") top
+    right/cover;
+}
+.bg-blue {
+  background: rgb(68, 120, 137);
+}
+.p-t-180 {
+  padding-top: 50px;
+}
+.wrapper {
+  margin: 0 auto;
+}
+.wrapper--w960 {
+  max-width: 960px;
+}
+/* input {
+  outline: none;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+} */
+.card {
+  overflow: hidden;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  /* background: rgba(212, 207, 207, 0.925)252, 249, 249; */
+}
+.card-2 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: table;
+}
+.card-2 .card-heading {
+  background: url("/assets/images/cover.jpg") top right / cover;
+  width: 40%;
+  display: table-cell;
+}
+.card-2 .card-body {
+  display: table-cell;
+  height: 100%;
+}
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.row-space {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.col-2 {
+  width: -webkit-calc((112% - 70px) / 2);
+  width: -moz-calc((112% - 70px) / 2);
+  width: calc((112% - 70px) / 2);
+}
+.form-control:hover {
+  border-color: rgb(38, 38, 241);
+}
+.bg:hover {
+  transform: scale(1.01);
+}
+.button {
+  background: rgb(68, 120, 137);
+}
+.button:hover {
+  background: #264b69;
+  color: white;
+}
+.navbaground {
+  /* color: #282828 !important; */
+  /* background-color: #1f1e1e; */
+  background-color: #204051;
+}
+.navtext {
+  color: antiquewhite !important;
+}
+
+.image-wrap {
+  padding: 10px;
+  border: solid 1px #e0e0e0;
+  display: inline-block;
+}
+
+.img-space {
+  border: dashed 1px #d3d3d3;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+
+  width: 100%;
+  padding: 10px;
+}
+
+.img-space img {
+  width: 100%;
+  height: 380px;
+  margin: auto;
+  cursor: pointer;
+}
+.fileInputProfileWrap {
+  width: 80%;
+  height: 350px;
+}
+.fileInputProfile {
+  position: absolute;
+  height: 100%;
+  width: 28%;
+  z-index: 99;
+  opacity: 0;
+}
+
+.fileInputProfile[disabled] + .img-space {
+  pointer-events: none;
+  cursor: not-allowed !important;
+}

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+.form-control:hover {
+  border: 1px solid rgb(68, 120, 137);
+}
+
+.form-group {
+  width: 40%;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-fluid {
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: -30px;
+  width: 250px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-overflow: ellipsis;
+  background: url("/assets/images/profilelogo.jpg") no-repeat top / cover;
+}
+
+.img-fluid img {
+  width: 100%;
+  height: 250px;
+}
+
+.file {
+  width: 5;
+}
+
+.font-robo {
+  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.page-wrapper {
+  height: 100vh;
+}
+
+.bg-red {
+  background: #e4e3e3;
+  background: url("/assets/images/book-cover.jpg") top/cover;
+}
+
+.bg-blue {
+  background: rgb(68, 120, 137);
+}
+
+.p-t-180 {
+  padding-top: 100px;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w960 {
+  max-width: 960px;
+}
+
+.card {
+  overflow: hidden;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  height: 80px;
+}
+
+.card-2 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 80px;
+  display: table;
+}
+
+.card-2 .card-heading {
+  width: 40%;
+  height: 80px;
+  display: table-cell;
+  background: rgb(68, 120, 137);
+}
+
+.card-2 .card-body {
+  display: table-cell;
+  height: 80px;
+}
+
+input {
+  outline: none;
+  margin: 0;
+  padding: 0%;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.header {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 150px;
+}
+
+#sign {
+  background-color: black;
+  color: white;
+  padding: 8px 13px 8px 13px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+#up {
+  background-color: rgb(121, 39, 39);
+  color: black;
+  padding: 8px 13px 8px 13px;
+  border-radius: 0px 3px 3px 0px;
+}

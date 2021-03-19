@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+      <div class="wrapper wrapper--w960">
+        <div class="shadow-lg mb-5 rounded-3">
+          <div class="bg">
+            <div class="card card-2">
+              <div class="card-heading">
+                <br /><br /><br /><br />
+                <div class="img-fluid">
+                  <img [src]="imgURL" class="img-thumbnail" *ngIf="imgURL" />
+                  <!-- <p><label for="file" style="cursor: pointer;"> Image</label></p> -->
+                </div>
+                <div class="container col-7">
+                  <p>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      class="offset-md-4 py-1"
+                      (change)="onFileChanged($event)"
+                      accept=" image/jpeg, image/png"
+                      style="cursor: pointer"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div class="card-body">
+                <form [formGroup]="signupForm" enctype="multipart/form-data">
+                  <div class="header" style="width: 300px; margin: 2% auto">
+                    <h1 style="color: black; text-align: center">
+                      <span id="sign">Sign</span><span id="up">Up</span>
+                    </h1>
+                  </div>
+                  <div class="container">
+                    <div class="form-group">
+                      <div class="col-12">
+                        <mat-form-field
+                          appearance="outline"
+                          class="example-full-width1"
+                        >
+                          <mat-label>FirstName</mat-label>
+                          <input
+                            matInput
+                            formControlName="firstName"
+                            id="firstName"
+                          />
+                          <div
+                            *ngIf="f.firstName.touched && f.firstName.invalid"
+                            class="text-danger"
+                          >
+                            <div
+                              *ngIf="f.firstName.errors.required"
+                              style="font-size: 10px"
+                            >
+                              firstname is required
+                            </div>
+                          </div>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-12">
+                        <mat-form-field
+                          appearance="outline"
+                          class="example-full-width1"
+                        >
+                          <mat-label>LastName</mat-label>
+                          <input
+                            matInput
+                            formControlName="lastName"
+                            id="lastName"
+                          />
+                          <div
+                            *ngIf="f.lastName.touched && f.lastName.invalid"
+                            class="text-danger"
+                          >
+                            <div
+                              *ngIf="f.lastName.errors.required"
+                              style="font-size: 10px"
+                            >
+                              lastname is required
+                            </div>
+                          </div>
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-12">
+                        <mat-form-field
+                          appearance="outline"
+                          class="example-full-width1"
+                        >
+                          <mat-label>Username</mat-label>
+                          <input
+                            matInput
+                            formControlName="username"
+                            id="username"
+                          />
+                          <div
+                            *ngIf="f.username.touched && f.username.invalid"
+                            class="text-danger"
+                          >
+                            <div
+                              *ngIf="f.username.errors.required"
+                              style="font-size: 10px"
+                            >
+                              username is required
+                            </div>
+                          </div>
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-12">
+                        <mat-form-field
+                          appearance="outline"
+                          class="example-full-width1"
+                        >
+                          <mat-label>Email</mat-label>
+                          <input
+                            matInput
+                            formControlName="email"
+                            required
+                            id="email"
+                            [pattern]="emailPattern"
+                          />
+                          <div
+                            *ngIf="f.email.touched && f.email.invalid"
+                            class="text-danger"
+                          >
+                            <div
+                              *ngIf="f.email.errors.required"
+                              style="font-size: 10px"
+                            >
+                              email is required
+                            </div>
+                            <div
+                              *ngIf="f.email.errors.pattern"
+                              style="font-size: 10px"
+                            >
+                              not valid
+                            </div>
+                          </div>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-12">
+                        <mat-form-field
+                          appearance="outline"
+                          class="example-full-width1"
+                        >
+                          <mat-label>Phone</mat-label>
+                          <input
+                            matInput
+                            formControlName="phone"
+                            [pattern]="mobNumberPattern"
+                            id="phone"
+                          />
+                          <div
+                            *ngIf="f.phone.touched && f.phone.invalid"
+                            class="text-danger"
+                          >
+                            <div
+                              *ngIf="f.phone.errors.required"
+                              style="font-size: 10px"
+                            >
+                              Number is required
+                            </div>
+                            <div
+                              *ngIf="f.phone.errors.pattern"
+                              style="font-size: 10px"
+                            >
+                              enter 10 digits
+                            </div>
+                          </div>
+                        </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-12">
+                        <mat-form-field
+                          appearance="outline"
+                          class="example-full-width1"
+                          style="width: 98%"
+                        >
+                          <mat-label>Password</mat-label>
+                          <input
+                            matTooltip="should contain Atleast one capital letter,number and special character"
+                            matInput
+                            formControlName="password"
+                            required
+                            [pattern]="passwordPattern"
+                            [type]="hide ? 'password' : 'text'"
+                          />
+                          <button
+                            mat-icon-button
+                            matSuffix
+                            (click)="hide = !hide"
+                            [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide"
+                          >
+                            <mat-icon>{{
+                              hide ? "visibility_off" : "visibility"
+                            }}</mat-icon>
+                          </button>
+                          <div
+                            *ngIf="f.password.touched && f.password.invalid"
+                            class="text-danger"
+                          >
+                            <div
+                              *ngIf="f.password.errors.required"
+                              style="font-size: 10px"
+                            >
+                              password is required
+                            </div>
+                            <div
+                              *ngIf="f.password.errors.pattern"
+                              style="font-size: 10px"
+                            >
+                              not valid
+                            </div>
+                          </div>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="header">
+                  <button
+                    type="submit "
+                    class="btn btn-primary"
+                    [disabled]="!signupForm.valid"
+                    (click)="signup(signupForm)"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+                <p
+                  style="text-align: center; margin-top: 15px; font-size: 14px"
+                >
+                  Already a User? <a routerLink="/login"> Login</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!-- <p>dictionary works!</p> -->
+<div class="container">
+    <div class="input-group searchinput" *ngIf="searchbox">
+        <input type="search" class="form-control rounded" placeholder="Search Meaning" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchword" />
+        <button type="button" class="btn btn-outline-primary" (click)="searchmeaning()">search</button>
+    </div>
+    <div>
+        <h4>{{resultMeaning.word}}</h4>
+    </div>
+
+    <div class="card" *ngFor="let z of resultMeaning">
+        <div class="card-body" *ngFor="let n of z">
+            <h4 class="card-title">{{n.word}}</h4>
+            <div *ngFor="let a of n.meanings">
+                <h5 class="card-subtitle mb-2 text-muted">{{a.partOfSpeech}}</h5>
+                <div *ngFor="let b of a.definitions">
+                    <p class="card-text">{{b.definition}}</p>
+                    <ul>
+                        Example -
+                        <li>
+                            <p class="card-text">{{b.example}}</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        Synoname -
+                        <li>
+                            <p class="card-text">{{ b.synonyms }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a> -->
+        </div>
+    </div>
+    <div *ngIf="errorpage" style="color: red;">
+        Meaning of the word could not found
+    </div>
+    <!-- <div *ngFor="let z of resultMeaning">
+        <div *ngFor="let n of z">
+            <h4>Word - {{n.word}}</h4>
+            <div *ngFor="let a of n.meanings">
+                <h4>Part of speech - {{a.partOfSpeech}}</h4>
+                <div *ngFor="let b of a.definitions">
+                    <h4>Defination - {{b.definition}}</h4>
+                    <h4>{{b.synonyms}} </h4>
+                    <h4>Example - {{b.example}}</h4>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>

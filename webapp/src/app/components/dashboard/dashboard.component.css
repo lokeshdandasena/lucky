@@ -1,0 +1,56 @@
+.navbaground {
+    background-color: #204051;
+}
+
+.navtext {
+    color: antiquewhite !important;
+    text-decoration: none;
+}
+
+.search {
+    display: flex;
+    gap: 1rem;
+    width: 30%;
+}
+
+
+/* Cards */
+
+.card-body {
+    padding: 0;
+}
+
+.book-about {
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.card img {
+    height: 300px;
+    width: 300px;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Genre-Stacker */
+
+.genre-stacker {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 820px) {
+    .navbar>.container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+    .search {
+        width: 60%;
+    }
+}

@@ -1,0 +1,23 @@
+server:
+  port: 9091
+
+
+spring:
+  rabbitmq:
+    queue1: user.queue
+    exchange1: user.exchange
+    routingkey1: user.routingkey
+    queue2: book.queue
+    exchange2: book.exchange
+    routingkey2: book.routingkey
+    host: localhost
+    username: guest
+    password: guest
+    port: 15672
+
+  neo4j:
+    uri: neo4j://localhost:7687
+    data:
+      neo4j:
+        username: neo4j
+        password: admin

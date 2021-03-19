@@ -1,0 +1,278 @@
+<div class="root">
+  <nav class="navbar navbar-expand-lg navbar-light navbaground">
+    <div class="container-fluid">
+      <a class="navbar-brand navtext" routerLink="/dashboard"
+        ><i class="fas fa-book-open"> Knowledge Hub </i></a
+      >
+    </div>
+  </nav>
+  <div class="container">
+    <div class="col-md-12">
+      <h1 class="heading text-center">
+        <strong> Your Important Notes</strong>
+      </h1>
+      <div class="d-flex justify-content-center px-5 p-4">
+        <div class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder=" Type keywords to get your important points"
+          />
+
+          <!-- [(ngModel)]="nameSearch"
+          (ngModelChange)="sendData($event)" -->
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="col-md-12" id="accordionExample">
+        <div class="issue-card">
+          <ng-container>
+            <div class="accordion mb-3">
+              <div class="open">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <div
+                      class="accordion-button btn"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      <p class="ml">Book Title</p>
+                    </div>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-md-2 cnt">
+                          <p><strong>Page No</strong></p>
+                        </div>
+                        <div class="col-md-10 cnt">
+                          <p><strong>Points</strong></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2 cnt p-4">
+                          <p class="m-2">10.</p>
+                        </div>
+                        <div class="col-md-10 p-4">
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container>
+            <div class="accordion mb-3">
+              <div class="open">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <div
+                      class="accordion-button btn"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <p class="ml">Book Title</p>
+                    </div>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-md-2 cnt">
+                          <p><strong>Page No</strong></p>
+                        </div>
+                        <div class="col-md-10 cnt">
+                          <p><strong>Points</strong></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2 cnt p-4">
+                          <p class="m-2">10.</p>
+                        </div>
+                        <div class="col-md-10 p-4">
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container>
+            <div class="accordion mb-3">
+              <div class="open">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <div
+                      class="accordion-button btn"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <p class="ml">Book Title</p>
+                    </div>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-md-2 cnt">
+                          <p><strong>Page No</strong></p>
+                        </div>
+                        <div class="col-md-10 cnt">
+                          <p><strong>Points</strong></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2 cnt p-4">
+                          <p class="m-2">10.</p>
+                        </div>
+                        <div class="col-md-10 p-4">
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container>
+            <div class="accordion mb-3">
+              <div class="open">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <div
+                      class="accordion-button btn"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      <p class="ml">Book Title</p>
+                    </div>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col-md-2 cnt">
+                          <p><strong>Page No</strong></p>
+                        </div>
+                        <div class="col-md-10 cnt">
+                          <p><strong>Points</strong></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-2 cnt p-4">
+                          <p class="m-2">10.</p>
+                        </div>
+                        <div class="col-md-10 p-4">
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                          <p class="m-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ea qui rerum soluta in perspiciatis earum
+                            expedita eum consequuntur, id corporis iure. Vitae
+                            velit a dolorum mollitia quos, odit corrupti ea.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Page No.</th>
+        <th>Points.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10.</td>
+        <td>Hai this is my notes 1.</td>
+      </tr>
+      <tr>
+        <td>21.</td>
+        <td>Hai this is my notes 2.</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
